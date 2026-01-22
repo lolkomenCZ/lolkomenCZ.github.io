@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlouhá noc: Cesta domů</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside id="bocni-panel">
+        <div class="hlavicka-panelu">
+            <h2>STAV HRÁČE</h2>
+        </div>
+        
+        <div class="blok-statistik">
+            <span class="popisek">Jméno:</span>
+            <strong id="zobrazeni-jmena" class="hodnota-txt">???</strong>
+        </div>
+
+        <div class="blok-statistik">
+            <span class="popisek">Peněženka:</span>
+            <strong id="zobrazeni-penez" class="hodnota-txt zlata">600</strong> <span class="zlata">Kč</span>
+        </div>
+
+        <div class="blok-statistik blok-zdravi">
+            <span class="popisek">Zdraví (HP):</span>
+            <div class="hp-lista-pozadi">
+                <div id="hp-lista-plna"></div>
+            </div>
+            <span id="hp-text-cislo">100 / 100</span>
+        </div>
+        
+        <div class="paticka-panelu">
+        </div>
+    </aside>
+
+    <main>
+        <header>
+            <h1> Dlouhá noc</h1>
+        </header>
+
+        <section id="herni-okno">
+            <div class="kontejner-obrazku">
+                <img id="obrazek-sceny" src="obrazky/hospoda.jpg" alt="Herní scéna">
+            </div>
+
+            <h2 id="nadpis-sceny">Začátek hry</h2>
+            <div id="obsah-pribehu">
+                Probudil ses u stolu. Hospoda zavírá. Číšník čeká na zaplacení. <br><br>
+                Tvým cílem je dostat se domů. Cesta pěšky je dlouhá a nebezpečná. Taxík je rychlý, ale drahý.
+            </div>
+            <div id="oblast-zpetne-vazby"></div>
+        </section>
+
+        <section id="oblast-voleb">
+            <button class="tlacitko-start" onclick="spustitHru()">Vstát od stolu</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
