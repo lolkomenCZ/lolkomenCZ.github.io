@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSEUM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="sticky-nav">
+    <a href="#" class="logo">MUSEUM</a>
+    <nav>
+      <a href="#exhibitions"><span class="lang-cs">VÝSTAVY</span><span class="lang-en">EXHIBITIONS</span></a>
+      <a href="#featured"><span class="lang-cs">TOP EXPOZICE</span><span class="lang-en">FEATURED</span></a>
+      <a href="#visit"><span class="lang-cs">NÁVŠTĚVA</span><span class="lang-en">VISIT</span></a>
+      <a href="#reviews"><span class="lang-cs">RECENZE</span><span class="lang-en">REVIEWS</span></a>
+    </nav>
+    <div class="header-actions">
+      <button id="langToggle" class="lang-btn">EN</button>
+      <a href="#book" class="btn btn-primary"><span class="lang-cs">REZERVACE</span><span class="lang-en">BOOK NOW</span></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><span class="lang-cs">OBJEVTE HISTORII</span><span class="lang-en">DISCOVER HISTORY</span></h1>
+      <div class="hero-btns">
+        <a href="#book" class="btn btn-primary"><span class="lang-cs">PLÁNOVAT NÁVŠTĚVU</span><span class="lang-en">BOOK YOUR VISIT</span></a>
+        <a href="#exhibitions" class="btn btn-secondary"><span class="lang-cs">PROZKOUMAT VÝSTAVY</span><span class="lang-en">EXPLORE EXHIBITIONS</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <h2><span class="lang-cs">DO NOVÉ VÝSTAVY ZBÝVÁ</span><span class="lang-en">COUNTDOWN TO END OF EXHIBITION</span></h2>
+    <div class="timer" id="countdown">
+      <div class="time-box"><span id="days">00</span><small><span class="lang-cs">Dní</span><span class="lang-en">Days</span></small></div>
+      <div class="time-box"><span id="hours">00</span><small><span class="lang-cs">Hodin</span><span class="lang-en">Hours</span></small></div>
+      <div class="time-box"><span id="mins">00</span><small><span class="lang-cs">Minut</span><span class="lang-en">Mins</span></small></div>
+      <div class="time-box"><span id="secs">00</span><small><span class="lang-cs">Sekund</span><span class="lang-en">Secs</span></small></div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section id="featured" class="featured-section">
+    <div class="section-header">
+      <h2><span class="lang-cs">PRÉMIOVÉ VÝSTAVY</span><span class="lang-en">FEATURED EXHIBITIONS</span></h2>
+    </div>
+    <div class="carousel">
+      <button id="prevBtn" class="carousel-btn">❮</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track" id="track">
+          <li class="carousel-slide slide-1">
+            <div class="slide-content">
+              <h3>MONET</h3>
+              <p><span class="lang-cs">Mistrovská díla impresionismu</span><span class="lang-en">Masterpieces of Impressionism</span></p>
+            </div>
+          </li>
+          <li class="carousel-slide slide-2">
+            <div class="slide-content">
+              <h3>RODIN</h3>
+              <p><span class="lang-cs">Ruce sochaře</span><span class="lang-en">The Sculptor's Hands</span></p>
+            </div>
+          </li>
+          <li class="carousel-slide slide-3">
+            <div class="slide-content">
+              <h3>VAN GOGH</h3>
+              <p><span class="lang-cs">Hvězdné noci</span><span class="lang-en">Starry Nights</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button id="nextBtn" class="carousel-btn">❯</button>
+    </div>
+  </section>
+
+  <!-- CURRENT EXHIBITIONS -->
+  <section id="exhibitions" class="current-exhibitions">
+    <div class="section-header">
+      <h2><span class="lang-cs">AKTUÁLNÍ EXPOZICE</span><span class="lang-en">CURRENT EXHIBITIONS</span></h2>
+    </div>
+    <div id="exhibition-grid" class="grid-container">
+    </div>
+  </section>
+
+  <!-- PLAN VISIT -->
+  <section id="visit" class="plan-visit">
+    <div class="section-header">
+      <h2><span class="lang-cs">PLÁNOVÁNÍ NÁVŠTĚVY</span><span class="lang-en">PLAN YOUR VISIT</span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <div class="info-box">
+          <strong><span class="lang-cs">LOKACE</span><span class="lang-en">LOCATION</span></strong><br>Václavské náměstí 68, Praha
+        </div>
+        <div class="info-box">
+          <strong><span class="lang-cs">OTEVÍRACÍ DOBA</span><span class="lang-en">HOURS</span></strong><br>Po-Ne: 10:00 - 18:00
+        </div>
+        <div class="info-box">
+          <strong><span class="lang-cs">KONTAKT</span><span class="lang-en">CONTACT</span></strong><br>info@muzeum.cz | +420 123 456 789
+        </div>
+        <div class="info-box">
+          <strong><span class="lang-cs">CESTA</span><span class="lang-en">WAY</span></strong><br>Metro A/C - Stanice Muzeum
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.100868128458!2d14.428416676839352!3d50.08253131365825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b949216069947%3A0xc4864c39f0413fcd!2sN%C3%A1rodn%C3%AD%20muzeum!5e0!3m2!1scs!2scz!4v1714150530000!5m2!1scs!2scz" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK VISIT -->
+  <section id="book" class="book-visit">
+    <div class="book-wrapper">
+      <h2><span class="lang-cs">REZERVACE VSTUPENEK</span><span class="lang-en">BOOK YOUR VISIT</span></h2>
+      <form class="book-form">
+        <div class="form-group">
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <input type="time" required>
+        </div>
+        <div class="form-group">
+          <input type="number" placeholder="1" min="1" required>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="" disabled selected>TYPE</option>
+            <option value="adult">Dospělý / Adult</option>
+            <option value="child">Dítě / Child</option>
+            <option value="student">Student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="FIRST NAME" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="LAST NAME" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="EMAIL" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="PHONE" required>
+        </div>
+        <div class="form-group full-width">
+          <button type="submit" class="btn btn-primary submit-btn"><span class="lang-cs">POTVRDIT REZERVACI</span><span class="lang-en">CONFIRM BOOKING</span></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-header">
+      <h2><span class="lang-cs">NÁZORY NÁVŠTĚVNÍKŮ</span><span class="lang-en">VISITOR REVIEWS</span></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-box"><p>"Úžasný zážitek, velmi doporučuji expozici Egypta!"</p><span>- Jan N.</span></div>
+      <div class="review-box"><p>"Krásné prostředí a skvěle organizované výstavní prostory."</p><span>- Petra K.</span></div>
+      <div class="review-box"><p>"Personál byl velmi nápomocný. Skvělý výlet pro rodinu."</p><span>- Tomáš S.</span></div>
+      <div class="review-box"><p>"Moderní expozice jsou dechberoucí."</p><span>- Lucie V.</span></div>
+      <div class="review-box"><p>"Líbila se mi interaktivní část pro děti."</p><span>- Marek D.</span></div>
+      <div class="review-box"><p>"Určitě se sem vrátím, jedno odpoledne nestačí."</p><span>- Eva M.</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-header">
+      <h2><span class="lang-cs">ČASTÉ DOTAZY</span><span class="lang-en">FREQUENTLY ASKED QUESTIONS</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-box">
+        <strong><span class="lang-cs">Je muzeum bezbariérové?</span><span class="lang-en">Is it wheelchair accessible?</span></strong>
+        <p><span class="lang-cs">Ano, všechny expozice jsou plně přístupné.</span><span class="lang-en">Yes, all exhibitions are fully accessible.</span></p>
+      </div>
+      <div class="faq-box">
+        <strong><span class="lang-cs">Můžu uvnitř fotit?</span><span class="lang-en">Can I take photos?</span></strong>
+        <p><span class="lang-cs">Ano, ale prosíme bez blesku a stativu.</span><span class="lang-en">Yes, but without flash and tripods.</span></p>
+      </div>
+      <div class="faq-box">
+        <strong><span class="lang-cs">Je na místě šatna?</span><span class="lang-en">Is there a cloakroom?</span></strong>
+        <p><span class="lang-cs">Šatna i skříňky jsou k dispozici zdarma.</span><span class="lang-en">Cloakroom and lockers are free to use.</span></p>
+      </div>
+      <div class="faq-box">
+        <strong><span class="lang-cs">Platí se za doprovod ZTP?</span><span class="lang-en">Are carers free?</span></strong>
+        <p><span class="lang-cs">Doprovod ZTP má vstup zcela zdarma.</span><span class="lang-en">Carers enter completely free of charge.</span></p>
+      </div>
+      <div class="contact-box">
+        <strong>PHONE</strong>
+        <p>+420 123 456 789</p>
+      </div>
+      <div class="contact-box">
+        <strong>EMAIL</strong>
+        <p>info@muzeum.cz</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo footer-logo">MUSEUM</div>
+        <p class="tagline"><span class="lang-cs">Uchováváme historii, inspirujeme budoucnost.</span><span class="lang-en">Preserving history, inspiring the future.</span></p>
+        <div class="socials" style="display:none;">
+          <a href="#" class="soc-box">IG</a>
+          <a href="#" class="soc-box">YT</a>
+          <a href="#" class="soc-box">FB</a>
+          <a href="#" class="soc-box">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3><span class="lang-cs">ODKAZY</span><span class="lang-en">LINKS</span></h3>
+        <a href="#exhibitions"><span class="lang-cs">Výstavy</span><span class="lang-en">Exhibitions</span></a>
+        <a href="#featured"><span class="lang-cs">Top Expozice</span><span class="lang-en">Featured</span></a>
+        <a href="#visit"><span class="lang-cs">Návštěva</span><span class="lang-en">Plan Your Visit</span></a>
+        <a href="#book"><span class="lang-cs">Vstupenky</span><span class="lang-en">Book Tickets</span></a>
+      </div>
+      <div class="footer-col">
+        <h3>INFO</h3>
+        <a href="#">FAQ</a>
+        <a href="#visit"><span class="lang-cs">Lokace</span><span class="lang-en">Location</span></a>
+        <br>
+        <p><strong><span class="lang-cs">KONTAKT</span><span class="lang-en">CONTACT US</span></strong><br>Václavské náměstí 68<br>+420 123 456 789<br>info@muzeum.cz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
